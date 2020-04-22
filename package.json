@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "postversion": "git push --follow-tags && npm run open-releases",
+    "open-releases": "open \"$(node -e 'console.log(`${require(\"./package.json\").repository}/releases`)')\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
